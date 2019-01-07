@@ -7,6 +7,7 @@ class OrderSummary extends Component {
     componentWillUpdate() {
         console.log('[OrderSummary] Willupdate');
     }
+
     render() {
         const ingredientSummary = Object.keys(this.props.ingredients)
             .map(igKey => {
@@ -15,6 +16,7 @@ class OrderSummary extends Component {
                         <span style={{ textTransform: 'captitalize' }}>{igKey}</span>: {this.props.ingredients[igKey]}
                     </li>);
             });
+
         return (
             <Aux>
                 <h3>Your Order</h3>
@@ -30,4 +32,5 @@ class OrderSummary extends Component {
         );
     }
 }
+
 export default OrderSummary;
